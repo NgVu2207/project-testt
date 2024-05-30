@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "14de4629-3ad8-470d-9d8c-4730e99ee7bd",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30971059"
+	},
+	"item": [
+		{
+			"name": "prisma Read User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIyLCJmdWxsX25hbWUiOiJrNCIsImVtYWlsIjoia240QGdtYWlsLmNvbSIsInBhc3Nfd29yZCI6IiQyYiQxMCRVdDk3VnVIdmNEb01FTHl3YnlobUMuQ3gyeTNqVy5XSm56NFRtNVRFNS9EL2VyM1lyTmxYcSJ9LCJpYXQiOjE3MTcwNzE4NzYsImV4cCI6MTcxNzA3MTk5Nn0.CTDUThCmiCg_7Upr30x6gEd3nUt_Oo20devYoZTFmQs"
+					}
+				],
+				"url": "{{domain}}:8080/api/user/v1/getUser"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Search By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}:8080/api/user/v1/searchByName/i"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Search By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}:8080/api/user/v1/getUserId/1"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Creat User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"messi\",\r\n    \"email\":\"messi@gmail.com\",\r\n    \"pass_word\":\"160998\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/user/v1/createUser"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"vu\",\r\n    \"email\":\"vu@gmail.com\",\r\n    \"pass_word\":\"220798\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/user/v1/updateUser/1"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"tran\",\r\n    \"email\":\"tran@gmail.com\",\r\n    \"pass_word\":\"564\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/user/v1/deleteUser/12"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\":\"k4\",\r\n    \"email\":\"kn4@gmail.com\",\r\n    \"pass_word\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/user/v1/signUp"
+			},
+			"response": []
+		},
+		{
+			"name": "prisma Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kn4@gmail.com\",\r\n    \"pass_word\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/user/v1/login"
+			},
+			"response": []
+		}
+	]
+}
